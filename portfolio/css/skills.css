@@ -1,0 +1,791 @@
+/* =====================================================
+   WHAT I TEACH
+   ===================================================== */
+
+.programs {
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.035);
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   INTRO
+   ===================================================== */
+
+.programs-intro {
+    max-width: 650px;
+    margin: 0 0 45px;
+}
+
+.programs-intro p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   FLAGSHIP CURRICULUM GUIDE DOWNLOAD
+   ===================================================== */
+
+.programs-guide-download {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    margin-top: 26px;
+}
+
+.programs-guide-btn-icon {
+    font-size: 15px;
+    line-height: 1;
+    transform: translateY(-1px);
+}
+
+.programs-guide-meta {
+    color: var(--text-muted);
+    font-size: 12px;
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 640px) {
+    .programs-guide-download {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+
+/* =====================================================
+   CAROUSEL
+   ===================================================== */
+
+.program-carousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+/* =====================================================
+   VIEWPORT
+   ===================================================== */
+
+.program-carousel-viewport {
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+
+
+/* =====================================================
+   TRACK
+   ===================================================== */
+
+.programs-track {
+    display: flex;
+    gap: 16px;
+    will-change: transform;
+    transition:
+        transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    touch-action: pan-y;
+    cursor: grab;
+}
+
+.programs-track.is-dragging {
+    cursor: grabbing;
+    transition: none;
+}
+
+
+/* =====================================================
+   PROGRAM CARD
+   ===================================================== */
+
+.program-card {
+    flex: 0 0 calc((100% - 32px) / 3);
+
+    min-height: 395px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 30px;
+
+    position: relative;
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    background: rgba(255, 255, 255, 0.012);
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.program-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -100px;
+    right: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(139, 92, 246, 0.08);
+
+    filter: blur(25px);
+
+    pointer-events: none;
+
+    transition: 0.4s ease;
+}
+
+.program-card:hover {
+    border-color: rgba(139, 92, 246, 0.38);
+
+    background: rgba(139, 92, 246, 0.025);
+
+    transform: translateY(-5px);
+}
+
+.program-card:hover::before {
+    transform: scale(1.5);
+    opacity: 1.4;
+}
+
+
+/* =====================================================
+   CARD TOP
+   ===================================================== */
+
+.program-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+}
+
+.program-number {
+    color: #514D5D;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.program-icon {
+    width: 44px;
+    height: 44px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(139, 92, 246, 0.22);
+
+    border-radius: 9px;
+
+    background: rgba(139, 92, 246, 0.07);
+
+    color: var(--purple-light);
+
+    font-size: 12px;
+    font-weight: 800;
+
+    font-family: monospace;
+}
+
+
+/* =====================================================
+   CONTENT
+   ===================================================== */
+
+.program-content {
+    position: relative;
+    z-index: 1;
+}
+
+.program-label {
+    margin-bottom: 8px;
+
+    color: var(--purple-light);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.program-card h3 {
+    margin-bottom: 13px;
+
+    color: var(--text);
+
+    font-size: 23px;
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    letter-spacing: -0.6px;
+}
+
+.program-description {
+    max-width: 340px;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   TOPICS
+   ===================================================== */
+
+.program-topics {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-top: 22px;
+}
+
+.program-topics span {
+    min-height: 28px;
+
+    display: inline-flex;
+    align-items: center;
+
+    padding: 0 9px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 6px;
+
+    color: #827D91;
+
+    font-size: 9px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.program-footer {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-top: 30px;
+    padding-top: 17px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.program-footer>span {
+    color: #5F5A6C;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   DOWNLOAD CURRICULUM BUTTON
+   ===================================================== */
+
+.program-download {
+    min-height: 34px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    padding: 0 12px;
+
+    border: 1px solid rgba(139, 92, 246, 0.28);
+
+    border-radius: 7px;
+
+    background: rgba(139, 92, 246, 0.06);
+
+    color: #B9B0D0;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.2px;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.program-download:hover {
+    color: #FFFFFF;
+
+    border-color: var(--purple);
+
+    background: rgba(139, 92, 246, 0.14);
+
+    transform: translateY(-2px);
+}
+
+.program-download:active {
+    transform: translateY(0);
+}
+
+.program-download:focus-visible {
+    outline: 2px solid var(--purple-light);
+    outline-offset: 3px;
+}
+
+.program-download-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 14px;
+    height: 14px;
+
+    font-size: 12px;
+    line-height: 1;
+
+    flex-shrink: 0;
+}
+
+
+/* =====================================================
+   ARROWS
+   ===================================================== */
+
+.program-carousel-arrow {
+    width: 43px;
+    height: 43px;
+
+    flex: 0 0 43px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.02);
+
+    color: #B5B0C2;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+
+    z-index: 5;
+}
+
+.program-carousel-arrow:hover {
+    color: white;
+
+    border-color: var(--purple);
+
+    background: rgba(139, 92, 246, 0.1);
+
+    transform: translateY(-2px);
+}
+
+.program-carousel-arrow:disabled {
+    opacity: 0.3;
+
+    cursor: default;
+
+    transform: none;
+}
+
+
+/* =====================================================
+   DOTS
+   ===================================================== */
+
+.program-carousel-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-top: 25px;
+}
+
+.program-dot {
+    width: 7px;
+    height: 7px;
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: #393542;
+
+    cursor: pointer;
+
+    transition:
+        width 0.3s ease,
+        background 0.3s ease;
+}
+
+.program-dot.active {
+    width: 24px;
+
+    border-radius: 10px;
+
+    background: var(--purple);
+}
+
+
+/* =====================================================
+   BOTTOM CTA
+   ===================================================== */
+
+.programs-cta {
+    margin-top: 50px;
+
+    padding: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    background: rgba(255, 255, 255, 0.012);
+}
+
+.programs-cta-content {
+    max-width: 600px;
+}
+
+.programs-cta-label {
+    margin-bottom: 8px;
+
+    color: var(--purple-light);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.programs-cta h3 {
+    margin-bottom: 8px;
+
+    color: var(--text);
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.4px;
+}
+
+.programs-cta-content>p:last-child {
+    color: var(--text-muted);
+
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   CTA BUTTON
+   ===================================================== */
+
+.programs-cta-button {
+    flex: 0 0 auto;
+
+    min-height: 46px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 0 20px;
+
+    border: 1px solid rgba(139, 92, 246, 0.45);
+
+    border-radius: 8px;
+
+    background: rgba(139, 92, 246, 0.12);
+
+    color: #EDE9FE;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.programs-cta-button span {
+    font-size: 14px;
+}
+
+.programs-cta-button:hover {
+    background: rgba(139, 92, 246, 0.2);
+
+    border-color: var(--purple);
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 1000px) {
+
+    .program-card {
+        flex: 0 0 calc((100% - 16px) / 2);
+
+        min-height: 380px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .programs-intro {
+        margin-bottom: 30px;
+    }
+
+    .programs-intro p {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+    .program-carousel {
+        gap: 8px;
+    }
+
+    .program-carousel-arrow {
+        width: 36px;
+        height: 36px;
+
+        flex: 0 0 36px;
+
+        font-size: 14px;
+    }
+
+    .program-card {
+        flex: 0 0 100%;
+
+        min-height: 370px;
+
+        padding: 27px;
+    }
+
+    .program-card-top {
+        margin-bottom: 42px;
+    }
+
+    .program-card h3 {
+        font-size: 21px;
+    }
+
+    .program-description {
+        font-size: 12px;
+
+        line-height: 1.75;
+    }
+
+    .program-footer {
+        gap: 8px;
+    }
+
+    .program-download {
+        min-height: 34px;
+
+        padding: 0 10px;
+
+        gap: 6px;
+
+        font-size: 8.5px;
+    }
+
+    .programs-cta {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 22px;
+
+        padding: 25px;
+    }
+
+    .programs-cta-content {
+        max-width: none;
+    }
+
+    .programs-cta-button {
+        width: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+    .program-carousel {
+        gap: 6px;
+    }
+
+    .program-carousel-arrow {
+        width: 32px;
+        height: 32px;
+
+        flex: 0 0 32px;
+
+        font-size: 12px;
+    }
+
+    .program-card {
+        min-height: 350px;
+
+        padding: 22px;
+    }
+
+    .program-card-top {
+        margin-bottom: 32px;
+    }
+
+    .program-icon {
+        width: 40px;
+        height: 40px;
+
+        font-size: 10px;
+    }
+
+    .program-label {
+        font-size: 8px;
+
+        letter-spacing: 1.7px;
+    }
+
+    .program-card h3 {
+        font-size: 19px;
+    }
+
+    .program-description {
+        font-size: 11.5px;
+
+        line-height: 1.7;
+    }
+
+    .program-topics {
+        gap: 6px;
+    }
+
+    .program-topics span {
+        min-height: 27px;
+
+        padding: 0 8px;
+
+        font-size: 9px;
+    }
+
+    .program-footer {
+        align-items: flex-end;
+    }
+
+    .program-footer>span {
+        font-size: 8.5px;
+    }
+
+    .program-download {
+        min-height: 32px;
+
+        padding: 0 8px;
+
+        font-size: 8px;
+
+        gap: 5px;
+    }
+
+    .program-download-icon {
+        width: 12px;
+        height: 12px;
+
+        font-size: 11px;
+    }
+
+    .programs-cta {
+        padding: 22px;
+    }
+
+    .programs-cta h3 {
+        font-size: 19px;
+    }
+
+    .programs-cta-content>p:last-child {
+        font-size: 11px;
+    }
+
+}

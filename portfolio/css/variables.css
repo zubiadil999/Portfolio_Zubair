@@ -1,0 +1,45 @@
+:root {
+
+    /* ================= COLORS ================= */
+
+    --midnight: #0B0B12;
+    --midnight-light: #10101A;
+    --midnight-card: #11111A;
+
+    --purple: #8B5CF6;
+    --purple-light: #A78BFA;
+    --purple-dark: #6D3FE0;
+
+    --text: #EDE9FE;
+    --text-muted: #9895A8;
+
+    --white: #FFFFFF;
+
+    --green: #22C55E;
+    --red: #EF4444;
+    --yellow: #EAB308;
+
+
+    /* ================= BORDERS ================= */
+
+    --border:
+        rgba(139, 92, 246, 0.16);
+
+    --border-light:
+        rgba(255, 255, 255, 0.055);
+
+
+    /* ================= BACKGROUNDS ================= */
+
+    --card:
+        rgba(255, 255, 255, 0.025);
+
+
+    /* ================= SIZES ================= */
+
+    --container: 1180px;
+
+    --radius: 18px;
+
+    --nav-height: 78px;
+}

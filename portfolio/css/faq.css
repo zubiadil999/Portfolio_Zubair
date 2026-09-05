@@ -1,0 +1,487 @@
+/* =====================================================
+   FAQ
+   ===================================================== */
+
+.faq {
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.035);
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   INTRO
+   ===================================================== */
+
+.faq-intro {
+    max-width: 650px;
+    margin-bottom: 42px;
+}
+
+.faq-intro p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   FAQ LIST
+   ===================================================== */
+
+.faq-list {
+    max-width: 900px;
+    margin: 0 auto;
+    border-top: 1px solid var(--border);
+}
+
+
+/* =====================================================
+   FAQ ITEM
+   ===================================================== */
+
+.faq-item {
+    border-bottom: 1px solid var(--border);
+}
+
+
+/* =====================================================
+   SUMMARY
+   ===================================================== */
+
+.faq-item summary {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 4px;
+    cursor: pointer;
+    list-style: none;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    outline: none;
+    transition: color 0.25s ease;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::marker {
+    display: none;
+}
+
+
+/* =====================================================
+   QUESTION
+   ===================================================== */
+
+.faq-question {
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   TOGGLE
+   ===================================================== */
+
+.faq-toggle {
+    flex: 0 0 auto;
+
+    width: 31px;
+    height: 31px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid var(--border);
+    border-radius: 7px;
+
+    color: var(--text-muted);
+
+    font-family: monospace;
+    font-size: 17px;
+    font-weight: 400;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* =====================================================
+   OPEN STATE
+   ===================================================== */
+
+.faq-item[open] summary {
+    color: #F0ECFA;
+}
+
+.faq-item[open] .faq-toggle {
+    transform: rotate(45deg);
+
+    color: var(--purple-light);
+
+    border-color: rgba(139, 92, 246, 0.4);
+
+    background: rgba(139, 92, 246, 0.08);
+}
+
+
+/* =====================================================
+   HOVER
+   ===================================================== */
+
+.faq-item summary:hover {
+    color: var(--purple-light);
+}
+
+.faq-item summary:hover .faq-toggle {
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+
+/* =====================================================
+   ANSWER
+   ===================================================== */
+
+.faq-answer {
+    max-width: 760px;
+
+    padding:
+        0 55px 27px 4px;
+
+    animation: faqOpen 0.25s ease;
+}
+
+@keyframes faqOpen {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.faq-answer p {
+    color: var(--text-muted);
+    font-size: 12.5px;
+    line-height: 1.85;
+}
+
+
+/* =====================================================
+   CTA
+   ===================================================== */
+
+.faq-cta {
+    position: relative;
+
+    max-width: 900px;
+
+    margin: 42px auto 0;
+
+    padding: 28px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    background:
+        linear-gradient(110deg,
+            rgba(139, 92, 246, 0.07),
+            rgba(255, 255, 255, 0.015));
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* subtle glow */
+
+.faq-cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: -70px;
+    bottom: -120px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(139, 92, 246, 0.10);
+
+    filter: blur(45px);
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   CTA CONTENT
+   ===================================================== */
+
+.faq-cta-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 600px;
+}
+
+.faq-cta-label {
+    margin-bottom: 7px;
+
+    color: var(--purple-light);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.faq-cta h3 {
+    margin-bottom: 7px;
+
+    color: var(--text);
+
+    font-size: 20px;
+    font-weight: 700;
+
+    letter-spacing: -0.4px;
+}
+
+.faq-cta-content>p:last-child {
+    color: var(--text-muted);
+
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   CTA BUTTON
+   ===================================================== */
+
+.faq-cta-button {
+    position: relative;
+    z-index: 1;
+
+    flex: 0 0 auto;
+
+    min-height: 45px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 0 20px;
+
+    border: 1px solid rgba(139, 92, 246, 0.45);
+
+    border-radius: 8px;
+
+    background:
+        rgba(139, 92, 246, 0.12);
+
+    color: #EDE9FE;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.faq-cta-button span {
+    font-size: 14px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.faq-cta-button:hover {
+    transform: translateY(-2px);
+
+    background:
+        rgba(139, 92, 246, 0.20);
+
+    border-color: var(--purple);
+}
+
+.faq-cta-button:hover span {
+    transform: translate(2px, -2px);
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .faq-list,
+    .faq-cta {
+        max-width: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .faq-intro {
+        margin-bottom: 32px;
+    }
+
+    .faq-intro p {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+
+    .faq-item summary {
+        min-height: 70px;
+
+        gap: 20px;
+
+        font-size: 13px;
+    }
+
+    .faq-toggle {
+        width: 29px;
+        height: 29px;
+
+        font-size: 15px;
+    }
+
+    .faq-answer {
+        padding:
+            0 45px 24px 4px;
+    }
+
+    .faq-answer p {
+        font-size: 12px;
+        line-height: 1.75;
+    }
+
+    .faq-cta {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+        padding: 24px;
+    }
+
+    .faq-cta-button {
+        width: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+    .faq-item summary {
+        min-height: 66px;
+
+        gap: 14px;
+
+        padding: 0 2px;
+
+        font-size: 12px;
+    }
+
+    .faq-toggle {
+        width: 27px;
+        height: 27px;
+
+        font-size: 14px;
+    }
+
+    .faq-answer {
+        padding:
+            0 35px 22px 2px;
+    }
+
+    .faq-answer p {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    .faq-cta {
+        padding: 21px;
+    }
+
+    .faq-cta h3 {
+        font-size: 19px;
+    }
+
+    .faq-cta-content>p:last-child {
+        font-size: 10.5px;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 360px) {
+
+    .faq-item summary {
+        font-size: 11.5px;
+    }
+
+    .faq-answer {
+        padding-right: 30px;
+    }
+
+    .faq-answer p {
+        font-size: 10.5px;
+    }
+
+    .faq-cta h3 {
+        font-size: 18px;
+    }
+
+    .faq-cta-content>p:last-child {
+        font-size: 10px;
+    }
+
+}

@@ -1,0 +1,97 @@
+/* =====================================================
+   WHATSAPP FLOATING CTA
+   Hidden by JS until SITE_CONFIG.WHATSAPP_NUMBER is set.
+   ===================================================== */
+
+.whatsapp-float-btn {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    z-index: 999;
+
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    box-shadow: 0 10px 30px rgba(34, 197, 94, 0.35);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-float-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+
+    box-shadow: 0 14px 36px rgba(34, 197, 94, 0.45);
+}
+
+.whatsapp-float-icon {
+    font-size: 24px;
+
+    color: var(--midnight);
+
+    line-height: 1;
+}
+
+
+/* =====================================================
+   CONTACT SECTION WHATSAPP LINK
+   ===================================================== */
+
+.contact-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 28px;
+    padding: 16px 18px;
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    background: rgba(34, 197, 94, 0.06);
+}
+
+.contact-whatsapp p {
+    color: var(--text-muted);
+    font-size: 13px;
+
+    margin: 0;
+}
+
+.contact-whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: var(--green);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+@media (max-width: 480px) {
+
+    .whatsapp-float-btn {
+        right: 16px;
+        bottom: 16px;
+
+        width: 50px;
+        height: 50px;
+    }
+
+}

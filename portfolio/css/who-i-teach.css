@@ -1,0 +1,488 @@
+/* =====================================================
+   WHO I TEACH
+   ===================================================== */
+
+.who-i-teach {
+    position: relative;
+
+    overflow: hidden;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.035);
+}
+
+
+/* =====================================================
+   INTRO
+   ===================================================== */
+
+.who-intro {
+    max-width: 620px;
+
+    margin-bottom: 42px;
+}
+
+
+.who-intro p {
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+
+    line-height: 1.85;
+}
+
+
+/* =====================================================
+   GRID
+   ===================================================== */
+
+.who-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+
+/* =====================================================
+   CARD
+   ===================================================== */
+
+.who-card {
+    position: relative;
+
+    min-height: 335px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 23px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.025),
+            rgba(255, 255, 255, 0.008));
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.who-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    top: -90px;
+    right: -80px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(139, 92, 246, 0.08);
+
+    filter: blur(45px);
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease;
+}
+
+
+.who-card:hover {
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(139, 92, 246, 0.28);
+
+    background:
+        linear-gradient(145deg,
+            rgba(139, 92, 246, 0.07),
+            rgba(255, 255, 255, 0.012));
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+
+.who-card:hover::before {
+    opacity: 1.5;
+}
+
+
+/* =====================================================
+   PRIMARY CARD
+   ===================================================== */
+
+.who-card-primary {
+    border-color:
+        rgba(139, 92, 246, 0.22);
+
+    background:
+        linear-gradient(145deg,
+            rgba(139, 92, 246, 0.08),
+            rgba(255, 255, 255, 0.012));
+}
+
+
+/* =====================================================
+   CARD TOP
+   ===================================================== */
+
+.who-card-top {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 38px;
+}
+
+
+.who-card-number {
+    color:
+        rgba(255, 255, 255, 0.30);
+
+    font-family: monospace;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+.who-card-tag {
+    padding: 5px 7px;
+
+    border: 1px solid rgba(139, 92, 246, 0.22);
+
+    border-radius: 4px;
+
+    background:
+        rgba(139, 92, 246, 0.055);
+
+    color:
+        var(--purple-light);
+
+    font-size: 7px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   ICON
+   ===================================================== */
+
+.who-card-icon {
+    position: relative;
+
+    z-index: 2;
+
+    width: 47px;
+    height: 47px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin-bottom: 22px;
+
+    border: 1px solid rgba(139, 92, 246, 0.28);
+
+    border-radius: 10px;
+
+    background:
+        rgba(139, 92, 246, 0.07);
+
+    color:
+        var(--purple-light);
+
+    font-family: monospace;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   TITLE
+   ===================================================== */
+
+.who-card h3 {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0 0 12px;
+
+    color:
+        var(--text);
+
+    font-size: 20px;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.5px;
+}
+
+
+.who-card h3 span {
+    color:
+        var(--purple-light);
+}
+
+
+/* =====================================================
+   DESCRIPTION
+   ===================================================== */
+
+.who-card>p {
+    position: relative;
+
+    z-index: 2;
+
+    margin: 0;
+
+    color:
+        var(--text-muted);
+
+    font-size: 10.5px;
+
+    line-height: 1.75;
+}
+
+
+/* =====================================================
+   CARD BOTTOM
+   ===================================================== */
+
+.who-card-bottom {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: auto;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.045);
+
+    color:
+        rgba(255, 255, 255, 0.38);
+
+    font-size: 8px;
+
+    font-weight: 600;
+}
+
+
+.who-arrow {
+    color:
+        var(--purple-light);
+
+    font-size: 13px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.who-card:hover .who-arrow {
+    transform:
+        translate(2px, -2px);
+}
+
+
+/* =====================================================
+   BOTTOM NOTE
+   ===================================================== */
+
+.who-note {
+    max-width: 700px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin: 22px auto 0;
+
+    padding: 12px 15px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.045);
+
+    border-radius: 7px;
+
+    background:
+        rgba(255, 255, 255, 0.012);
+}
+
+
+.who-note-dot {
+    width: 5px;
+    height: 5px;
+
+    flex: 0 0 5px;
+
+    border-radius: 50%;
+
+    background:
+        var(--purple-light);
+
+    box-shadow:
+        0 0 10px rgba(139, 92, 246, 0.65);
+}
+
+
+.who-note p {
+    margin: 0;
+
+    color:
+        var(--text-muted);
+
+    font-size: 9px;
+
+    line-height: 1.6;
+}
+
+
+.who-note a {
+    color:
+        var(--purple-light);
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+
+.who-note a:hover {
+    text-decoration:
+        underline;
+}
+
+
+/* =====================================================
+   TABLET
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .who-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .who-card:last-child {
+        grid-column:
+            1 / -1;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 650px) {
+
+    .who-intro {
+        margin-bottom: 30px;
+    }
+
+    .who-intro p {
+        font-size: 12px;
+    }
+
+    .who-grid {
+        grid-template-columns:
+            1fr;
+
+        gap: 10px;
+    }
+
+    .who-card {
+        min-height: 290px;
+
+        padding: 21px;
+    }
+
+    .who-card:last-child {
+        grid-column:
+            auto;
+    }
+
+    .who-card-top {
+        margin-bottom: 30px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 400px) {
+
+    .who-card {
+        min-height: 275px;
+
+        padding: 19px;
+    }
+
+    .who-card h3 {
+        font-size: 18px;
+    }
+
+    .who-card>p {
+        font-size: 10px;
+    }
+
+    .who-note {
+        align-items: flex-start;
+    }
+
+}
